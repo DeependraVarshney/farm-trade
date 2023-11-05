@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FarmTrade Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .form-group button {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background: #0056b3;
+        }
+        /* Styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background: #fff;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        /* Styles for the registration form within the modal */
+        .registration-form {
+            display: none;
+        }
+
+        /* Additional styles for the form fields (same as in the previous example) */
+        /* ... */
+
+    </style>
+</head>
+<body>
+    <button id="openModalBtn">Register as a Farmer</button>
+
+    <!-- Modal Container -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div id="emailForm" class="registration-form">
+                <h2>Register as a Farmer</h2>
+                <form id="emailRegistrationForm">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="submitEmail">Next</button>
+                    </div>
+                </form>
+               
+            </div>
+            <div id="fullRegistrationForm" class="registration-form">
+               
+                <h2>Complete Registration</h2>
+        <form id="fullRegistration">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="farmingType">Type of Farming:</label>
+                <select id="farmingType" name="farmingType" required>
+                    <option value="crop">Crop Farming</option>
+                    <option value="livestock">Livestock Farming</option>
+                    <option value="organic">Organic Farming</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="farmSize">Farm Size (in acres):</label>
+                <input type="number" id="farmSize" name="farmSize" required>
+            </div>
+            <div class="form-group">
+                <label for="investmentAmount">Investment Amount Sought ($):</label>
+                <input type="number" id="investmentAmount" name="investmentAmount" required>
+            </div>
+            <div class="form-group">
+                <label for="interestRate">Preferred Interest Rate (%):</label>
+                <select id="interestRate" name="interestRate" required>
+                    <option value="5">5%</option>
+                    <option value="7">7%</option>
+                    <option value="10">10%</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+    
+        const openModalBtn = document.getElementById("openModalBtn");
+        const modal = document.getElementById("myModal");
+        const emailForm = document.getElementById("emailForm");
+        const fullRegistrationForm = document.getElementById("fullRegistrationForm");
+
+        openModalBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+            emailForm.style.display = "block";
+        });
+
+        const submitEmail = document.getElementById("submitEmail");
+        const submitFullRegistration = document.getElementById("submitFullRegistration");
+
+        submitEmail.addEventListener("click", () => {
+            emailForm.style.display = "none";
+            fullRegistrationForm.style.display = "block";
+        });
+
+        submitFullRegistration.addEventListener("click", () => {
+            // Handle the full registration form submission here, including sending data to the server.
+            // You can use JavaScript to fetch or post data to the server.
+        });
+
+        // Close the modal if the user clicks outside of it
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

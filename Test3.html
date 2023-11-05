@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FarmTrade - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+       
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+
+        .logo img {
+            
+            height: 60px;
+            border-radius: 50%;
+        }.logo h1{
+            color: #fff;
+            margin-left: 10px;
+        }
+        
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        .section-heading {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        .users-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .user img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+            margin-right: 10px;
+        }
+
+        .user-info {
+            flex: 1;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        a:active {
+            background-color: #003f80;
+        }
+
+        .featured-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .featured-users {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .featured-user {
+            margin: 0 20px;
+        }
+
+        .featured-user img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./LOGO REAL.jpg" alt="FarmTrade Logo">
+           <h1>FarmTrade</h1>
+        </div>
+        <div class="registration-links">
+            <a href="#">Register as a Farmer</a>
+            <a href="#">Register as an Investor</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to FarmTrade</h2>
+
+        <p>
+            FarmTrade is a platform that connects farmers with investors, providing opportunities for growth and investment in agriculture.
+        </p>
+
+        <h2 class="section-heading">Featured Star-Rated Farmers and Investors</h2>
+        <div class="featured-section">
+            <div class="featured-users">
+                <div class="featured-user">
+                    <img src="./sooraj.jpg" alt="Featured Farmer 1">
+                    <p>Name:SURAJ</p>
+                    <p>Rating: ★★★★☆</p>
+                </div>
+                <div class="featured-user">
+                    <img src="./gcw.jpg" alt="Featured Investor 1">
+                    <p>Name: DEV</p>
+                    <p>Rating: ★★★★☆</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 FarmTrade</p>
+    </div>
+</body>
+</html>
